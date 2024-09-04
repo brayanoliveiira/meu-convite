@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: 46px; /* Ajuste o tamanho conforme necessário */
+        }
+
+        h4 {
+            font-weight: 300;
+            font-size: 36px; /* Ajuste o tamanho conforme necessário */
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 6px; /* Ajuste o tamanho conforme necessário */
+        }
+
+        button {
+            padding: 10px 40px;
+            border-radius: 5px;
+            font-family: "Roboto", sans-serif;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:first-child {
+            background-color: green;
+        }
+
+        button#nao {
+            background-color: red;
+            position: absolute;
+        }
+
+        div.buttons {
+            display: flex;
+            justify-content: space-around;
+            width: 300px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>❤️Convite especial para uma Gata mais que especial❤️</h1>
+        <div>
+            <h4>Isso aí, você mesma, conhecida como Esquilete🐿️</h4>
+            </h3>Quer sair pra jantar comigo?</h3>
+
+            <div class="buttons">
+                <button id="sim">Sim</button>
+                <button id="nao">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var moveButton = document.getElementById("nao");
+
+        moveButton.addEventListener("mouseover", function () {
+            var vertical = Math.floor(Math.random() * (window.innerHeight - 50));
+            var horizontal = Math.floor(Math.random() * (window.innerWidth - 100));
+            moveButton.style.left = horizontal + "px";
+            moveButton.style.top = vertical + "px";
+        });
+
+        var correctlyButton = document.getElementById("sim");
+        correctlyButton.addEventListener("click", function () {
+            alert("Amém, achei que n ia aceitar nunca! Já que aceitou por livre e expôntanea vontade te busco sexta às 20h?");
+        });
+    </script>
+</body>
+</html>
